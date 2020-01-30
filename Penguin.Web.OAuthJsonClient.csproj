@@ -6,6 +6,7 @@
     <AssemblyName>Penguin.Web.OAuthJsonClient</AssemblyName>
     <RootNamespace>Penguin.Web.OAuthJsonClient</RootNamespace>
     <Description>Not Available</Description>
+    <DocumentationFile>Penguin.Web.OAuthJsonClient.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Penguin.Web.JsonClient" Version="1.0.6-T9QC72V" />
