@@ -9,7 +9,7 @@
     <DocumentationFile>Penguin.Web.OAuthJsonClient.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Penguin.Web.JsonClient" Version="1.0.6-T9SAD4U" />
+    <PackageReference Include="Penguin.Web.JsonClient" Version="1.0.6-T9SPWN8" />
   </ItemGroup>
   <Import Project="Penguin.Projects.Shared\Penguin.Projects.Shared.csproj" />
 </Project>
