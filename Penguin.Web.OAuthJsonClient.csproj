@@ -2,14 +2,14 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageProjectUrl>https://github.com/penguincms/Penguin.Web.OAuthJsonClient</PackageProjectUrl>
-    <Version>1.0.0</Version>
+    <Version>5.0.0</Version>
     <AssemblyName>Penguin.Web.OAuthJsonClient</AssemblyName>
     <RootNamespace>Penguin.Web.OAuthJsonClient</RootNamespace>
     <Description>Not Available</Description>
     <DocumentationFile>Penguin.Web.OAuthJsonClient.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Penguin.Web.JsonClient" Version="1.0.6-T9XYC7H" />
+    <PackageReference Include="Penguin.Web.JsonClient" Version="5.0.0" />
   </ItemGroup>
   <Import Project="Penguin.Projects.Shared\Penguin.Projects.Shared.csproj" />
 </Project>
