@@ -1,12 +1,11 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Penguin.Web
 {
     public class OAuthToken
     {
+        private string tokenType;
+
         [JsonProperty("access_token")]
         public string AccessToken { get; set; }
 
@@ -29,7 +28,6 @@ namespace Penguin.Web
 
                 string toReturn = string.Empty;
 
-
                 for (int i = 0; i < this.tokenType.Length; i++)
                 {
                     if (i == 0)
@@ -46,7 +44,5 @@ namespace Penguin.Web
             }
             set => this.tokenType = value;
         }
-
-        private string tokenType;
     }
 }
