@@ -4,7 +4,7 @@
     <PackageProjectUrl>https://github.com/PenguinCms/Penguin.Web.OAuthJsonClient</PackageProjectUrl>
     <Version>5.0.5</Version>
     <AssemblyName>Penguin.Web.OAuthJsonClient</AssemblyName>
-    <RootNamespace>Penguin.Web.OAuthJsonClient</RootNamespace>
+    <RootNamespace>Penguin.Web</RootNamespace>
     <Description>Not Available</Description>
     <DocumentationFile>Penguin.Web.OAuthJsonClient.xml</DocumentationFile>
     <LangVersion>latest</LangVersion>

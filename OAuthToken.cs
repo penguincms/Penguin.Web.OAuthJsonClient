@@ -21,28 +21,28 @@ namespace Penguin.Web
         {
             get
             {
-                if (this.tokenType is null)
+                if (tokenType is null)
                 {
                     return null;
                 }
 
                 string toReturn = string.Empty;
 
-                for (int i = 0; i < this.tokenType.Length; i++)
+                for (int i = 0; i < tokenType.Length; i++)
                 {
                     if (i == 0)
                     {
-                        toReturn += char.ToUpper(this.tokenType[i]);
+                        toReturn += char.ToUpper(tokenType[i]);
                     }
                     else
                     {
-                        toReturn += this.tokenType[i];
+                        toReturn += tokenType[i];
                     }
                 }
 
                 return toReturn;
             }
-            set => this.tokenType = value;
+            set => tokenType = value;
         }
     }
 }

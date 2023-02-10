@@ -10,23 +10,21 @@ namespace Penguin.Web
 
         public OAuthJsonClient(string Key, string Secret, string AccessUrl, string Username = null, string Password = null)
         {
-            string encoded = System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("ISO-8859-1").GetBytes(Key + ":" + Secret));
+            string encoded = Convert.ToBase64String(System.Text.Encoding.GetEncoding("ISO-8859-1").GetBytes(Key + ":" + Secret));
 
-            using (WebClient client = new WebClient())
-            {
-                client.Headers.Add("Content-Type", "application/x-www-form-urlencoded;charset=UTF-8");
-                client.Headers.Add("Authorization", "Basic " + encoded);
+            using WebClient client = new();
+            client.Headers.Add("Content-Type", "application/x-www-form-urlencoded;charset=UTF-8");
+            client.Headers.Add("Authorization", "Basic " + encoded);
 
-                string data = !string.IsNullOrWhiteSpace(Username) && !string.IsNullOrWhiteSpace(Password)
-                    ? $"grant_type=password&username={Username}&password={Password}"
-                    : $"grant_type=client_credentials";
+            string data = !string.IsNullOrWhiteSpace(Username) && !string.IsNullOrWhiteSpace(Password)
+                ? $"grant_type=password&username={Username}&password={Password}"
+                : $"grant_type=client_credentials";
 
-                string response = client.UploadString(AccessUrl, data);
+            string response = client.UploadString(AccessUrl, data);
 
-                this.Token = Newtonsoft.Json.JsonConvert.DeserializeObject<OAuthToken>(response);
+            Token = Newtonsoft.Json.JsonConvert.DeserializeObject<OAuthToken>(response);
 
-                ApplyAuthHeader(this, this.Token);
-            }
+            ApplyAuthHeader(this, Token);
         }
 
         public static void ApplyAuthHeader(WebClient client, OAuthToken token)
@@ -46,9 +44,9 @@ namespace Penguin.Web
 
         protected override void PreRequest(Uri url)
         {
-            if (!this.Headers.AllKeys.Contains("Authorization"))
+            if (!Headers.AllKeys.Contains("Authorization"))
             {
-                ApplyAuthHeader(this, this.Token);
+                ApplyAuthHeader(this, Token);
             }
         }
     }
