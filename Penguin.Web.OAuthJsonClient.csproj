@@ -1,12 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;netstandard2.1;net5.0</TargetFrameworks>
-    <PackageProjectUrl>https://github.com/PenguinCMS/Penguin.Web.OAuthJsonClient</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/PenguinCms/Penguin.Web.OAuthJsonClient</PackageProjectUrl>
     <Version>5.0.5</Version>
     <AssemblyName>Penguin.Web.OAuthJsonClient</AssemblyName>
     <RootNamespace>Penguin.Web.OAuthJsonClient</RootNamespace>
     <Description>Not Available</Description>
     <DocumentationFile>Penguin.Web.OAuthJsonClient.xml</DocumentationFile>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Penguin.Web.JsonClient" Version="5.0.6-TB7ZBM0" />
